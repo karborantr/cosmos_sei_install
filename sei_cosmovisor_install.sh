@@ -15,7 +15,7 @@ if [ -f ".bash_profile" ]; then
 fi
 source "$HOME"/.bash_profile
 
-# delete old line for dublicate.
+# delete old line for duplicate.
 
 if [ -f ".bash_profile" ]; then 
 sed -i.org '/DAEMON_DATA_BACKUP_DIR\|DAEMON_RESTART_AFTER_UPGRADE\|DAEMON_NAME\|DAEMON_HOME\|UNSAFE_SKIP_BACKUP\|SEI_PORT\|SEI_CHAIN_ID\|WALLET\|NODENAME/d' "$HOME/.bash_profile"
@@ -126,11 +126,11 @@ elif [ -f "/usr/local/go" ]; then
     checkgover=$(go version)
   fi
 else
-  checkgover="NOT.HERE.GO.IM.SORY"
+  checkgover="NOT.HERE.GO.IM.SORRY"
 fi
 
 if [ "${checkgover:13:4}" == "${ver:0:4}" ]; then 
-	#NO NEED install go
+	#NO NEED INSTALL GO
 	echo -e "\e[1m\e[32mNo need to install go-lang\e[0m, versions are compatible."
 	echo -e "\e[1m\e[32mrequested\e[0m version $ver, \e[1m\e[32minstalled\e[0m version ${checkgover:13:6}"
 else
@@ -318,7 +318,7 @@ echo -e "To check sync status: \e[1m\e[32mcurl -s localhost:${SEI_PORT}657/statu
 echo " "
 echo " "
 echo " "
-echo -e "Do you want to create wallets? [Y/N]"
+echo -e "Do you want to create wallet? [Y/N]"
    read -rsn1 answer
     if [ "$answer" != "${answer#[Yy]}" ] ;then
     	   echo -e "press \e[1m\e[32m[Y]\e[0m for \e[1m\e[34mnew wallet\e[0m. Press \e[1m\e[32many key\e[0m for \e[1m\e[34mrecover wallet\e[0m with mnemonic.\e[0m"
